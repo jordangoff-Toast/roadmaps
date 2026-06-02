@@ -1,384 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bottlecap Alley — Month 1 Strategic Growth Roadmap</title>
-<style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: #050505; color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px 20px; }
-    .sites-fluid-container { width: 100%; max-width: 1140px; margin: 0 auto; overflow: visible; }
-    .sites-document-block { width: 100%; background-color: #0a0a0a; padding: 40px 45px; margin-bottom: 45px; border: 1px solid #1a1a1a; border-radius: 8px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); display: flex; flex-direction: column; background-image: radial-gradient(circle at 90% 10%, rgba(216, 67, 21, 0.06) 0%, transparent 50%), radial-gradient(circle at 10% 90%, rgba(255, 179, 0, 0.03) 0%, transparent 50%); }
-    .slide-header { width: 100%; border-bottom: 2px solid rgba(216, 67, 21, 0.2); padding-bottom: 12px; margin-bottom: 25px; }
-    .slide-header h2 { font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; text-transform: lowercase !important; }
-    .grid-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 25px; align-items: start; }
-    .card-tile { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(216, 67, 21, 0.15); padding: 20px; border-radius: 6px; margin-bottom: 15px; }
-    h3 { font-size: 18px; font-weight: 700; color: #ffb300; margin-bottom: 10px; text-transform: lowercase !important; }
-    p { font-size: 14px; line-height: 1.6; color: #cccccc; margin-bottom: 12px; }
-    .ai-visual-frame { width: 100%; height: 220px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(216, 67, 21, 0.2); margin-bottom: 12px; background: #050505; }
-    .bold-white { font-weight: 700; color: #ffffff; }
-    .footer-panel { width: 100%; display: flex; justify-content: space-between; font-size: 11px; color: rgba(255, 255, 255, 0.3); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 12px; margin-top: 25px; }
-</style>
+    <meta charset="UTF-8">
+    <title>Bottlecap Alley — Month 1 Strategic Growth Roadmap</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: #020202;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #f5f5f7;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        .slide-container {
+            width: 1100px;
+            height: 650px;
+            background-color: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            page-break-after: always;
+            break-after: page;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+        }
+        h1 { font-size: 32px; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 5px; }
+        h2 { font-size: 20px; font-weight: 700; color: #ff3b30; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 12px; border-left: 4px solid #ff3b30; padding-left: 10px; line-height: 1.2; }
+        h3 { font-size: 14px; font-weight: 600; color: #ffffff; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+        p { font-size: 12.5px; color: #a1a1a6; line-height: 1.4; margin-bottom: 10px; }
+        strong { color: #ffffff; }
+        .slide-header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #1a1a1a; padding-bottom: 10px; margin-bottom: 12px; }
+        .slide-header .brand-tag { font-size: 10px; font-weight: 700; color: #ffffff; letter-spacing: 2px; text-transform: uppercase; background: #ff3b30; padding: 4px 8px; border-radius: 2px; }
+        .slide-header .ctx-tag { font-size: 10px; font-weight: 500; color: #8e8e93; text-transform: uppercase; }
+        .slide-body { flex-grow: 1; display: flex; flex-direction: column; justify-content: flex-start; overflow: hidden; }
+        .slide-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1a1a1a; padding-top: 10px; margin-top: 10px; font-size: 10px; color: #8e8e93; text-transform: uppercase; letter-spacing: 1px; }
+        .stretch-row { display: flex; gap: 15px; align-items: stretch; width: 100%; margin-bottom: 10px; }
+        .stretch-card { flex: 1; background-color: #121212; border: 1px solid #1c1c1e; border-radius: 6px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; }
+        ul { list-style: none; }
+        li { font-size: 11.5px; color: #a1a1a6; line-height: 1.4; margin-bottom: 5px; padding-left: 12px; position: relative; }
+        li::before { content: "▪"; color: #ff3b30; position: absolute; left: 0; top: -1px; }
+        .banned-box { background-color: rgba(255, 59, 48, 0.03); border: 1px dashed rgba(255, 59, 48, 0.2); border-radius: 4px; padding: 10px; margin-top: 4px; }
+        .banned-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 4px; }
+        .banned-item { font-size: 9.5px; background: #1a1a1a; padding: 3px; text-decoration: line-through; color: #8e8e93; border-radius: 2px; text-align: center; }
+        .email-copy-panel { width: 100%; background: #121212; border: 1px solid #1c1c1e; border-radius: 6px; padding: 12px; margin-bottom: 10px; }
+        .email-copy-panel h4 { font-size: 12px; font-weight: 700; color: #ff3b30; text-transform: uppercase; margin-bottom: 4px; }
+        .email-copy-body { background: #0c0c0c; border: 1px solid #1c1c1e; padding: 10px; border-radius: 4px; font-size: 11.5px; color: #f5f5f7; white-space: pre-wrap; margin-top: 6px; font-family: inherit; line-height: 1.4; }
+        .static-social-row { display: flex; gap: 12px; width: 100%; height: 100%; align-items: stretch; }
+        .static-social-card { flex: 1; background: #121212; border: 1px solid #1c1c1e; border-radius: 6px; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+        .static-caption-box { background: #0c0c0c; border: 1px solid #1c1c1e; padding: 8px; border-radius: 4px; font-family: monospace; font-size: 9.5px; color: #34c759; white-space: pre-wrap; line-height: 1.35; height: 350px; overflow: hidden; }
+    </style>
 </head>
 <body>
-<div class="sites-fluid-container">
-<div class="sites-document-block">
-    <div class="slide-header"><h2>strategy profile overview</h2></div>
-    <div style="flex-grow: 1; padding: 10px 0;"><div class="grid-split"><div class="left-column-content">
-                <div class="card-tile">
-                    <h3>PART 1: The Master Strategic Document Copy Deck</h3>
-                <div class="card-tile">
-                    <h3>Section 1: Brand Voice Playbook</h3>
-                    <p><span class="bold-white">1. Brand Voice Identity & Personality</span></p>
-                    <p>Bottlecap Alley operates digitally and physically as an authentic, high-energy Texas casual hub. The persona is unpretentious, casual, and deeply rooted in local Texas backyard culture. It speaks as a welcoming neighborhood institution that balances sports bar energy and live music with a family-friendly atmosphere.</p>
-                </div>
-                    <p><span class="bold-white">2. Approved Technical BOH Action Descriptions</span></p>
-                    <p>All copy layers must adhere to the exact mechanical preparation words used in the restaurants:</p>
-                    <p>Burgers: Must be explicitly described as "fresh, never frozen," "grinded daily," and "smashed right on the grill" served on a fresh bun, brioche bun, or Texas toast.</p>
-                    <p>Fries: Must strictly use the combined menu nomenclature: "Fresh Cut Fries made from scratch right in the restaurant" or "fresh hand-cut fries."</p>
-                    <p>Battered / Prepared Elements: Must use the terms "hand-battered," "fried to golden brown perfection," and "our scratch recipe" when detailing items like Earl's All Meat Chili, signature scratch salsa recipe, or homemade guacamole.</p>
-                </div>
-                    <p><span class="bold-white">3. Tone, Pacing, and Sentence Cadence Rules</span></p>
-                    <p>Pacing: Punchy, urgent, and front-loaded. Content must emphasize value positions or event hooks using capitalized text anchors for rapid smartphone scannability.</p>
-                    <p>Cadence: Short, staccato sentences and conversational fragments that mirror authentic Texan spoken dialogue.</p>
-                    <p>The Structural Loop: State the Craving/Day $\rightarrow$ State the Explicit Fixed Price $\rightarrow$ Enforce the On-Premise Constraint.</p>
-                </div>
-                    <p><span class="bold-white">4. Banned Corporate Jargon & Absolute Guardrails</span></p>
-                    <p>THE BANNED LIST: Culinary buzzwords such as gourmet, hand-crafted, artisanal curation, fusion, price drop, save a dollar, or percentage off discounts are strictly prohibited. Internal campaign setup parameters, system logic notes, or conversation references must never bleed into customer-facing copy layers.</p>
-                    <p>THE EXACT-PRICE MANDATE: Abstract promo claims are completely banned. Copy must state the absolute fixed price point: "$3 Domestic Pints All Day Long", "$4 Tito's", "$3 Margaritas", or "$5 Queso Blanco & Chips".</p>
-                    <p>THE BUTTS-IN-SEATS MANDATE: Because Fresh Cut Fries made from scratch do not travel well off-premise, off-premise call-to-actions ("Order Online", "To-Go") are entirely retired. All copy utilizes physical, presence-driven verbs: Head over, pull up a stool, hit the patio, join us at the bar.</p>
-                </div>
-                <div class="card-tile">
-                    <h3>Section 2: Business Profile & Strategic Context</h3>
-                    <p><span class="bold-white">1. Multi-Unit Store Breakdown & Operating Schedules</span></p>
-                    <p>Marketing schedules are tracked across five corporate stores with specific operational constraints based on closing times and menu categories:</p>
-                    <p>Bottlecap Alley - CORSICANA (1208 W. 7th Ave) | Hours: 8:00 AM – 11:00 PM | All evening pushes stop by 9:00 PM. Features unique Grills & Skillet Nachos lines to protect margins.</p>
-                    <p>Bottlecap Alley - CROSS ROADS (11990 US Hwy 380) | Hours: 8:00 AM – 11:45 PM | Verified Live Music Location. Target dinner service blocks.</p>
-                    <p>Bottlecap Alley - GRAPEVINE (1469 W. State Hwy 114) | Hours: 8:00 AM – 11:45 PM | Est. 2010. High anonymous footprint. Pushes top-of-funnel PMAX and the "Kali-fornie" Chicken Sandwich.</p>
-                    <p>Bottlecap Alley - GREENVILLE (5804 Wesley St) | Hours: 8:00 AM – 11:45 PM | High-volume transit hub. Features the heavy-hitting D2' Burger paired with Earl's Chili Cheese Fries.</p>
-                    <p>Bottlecap Alley - NACOGDOCHES (3203 North Street) | Hours: 8:00 AM – 11:45 PM | Verified Live Music Location. Core 30–50 age block. Requires immediate loyalty re-calibration to stop point drainage.</p>
-                </div>
-                    <p><span class="bold-white">2. The Core Data & Revenue Problems</span></p>
-                    <p>The operations face an explicit structural bottleneck: transaction volumes are maxing out kitchen capacities during peak hours, yet the digital database remains heavily obscured by anonymous "Ghost Guests." Concurrently, the regular guest base is over-redeeming the legacy low-threshold loyalty system, causing significant margin erosion on core items.</p>
-                </div>
-                    <p><span class="bold-white">3. Strategic Marketing Pillars</span></p>
-                    <p>Audience Unmasking (Consolidation): Leverage the unified Toast Website migration to convert anonymous checkout volume into owned digital profiles (Email database expansion) without launching blanket, margin-draining discounts.</p>
-                    <p>Zero-Friction Modifier Lift: Structurally pair top-of-funnel visual anchors (like the Original Original Burger) with operationally simple, high-margin accompaniments (Queso Blanco & Chips, machine-poured beers/margaritas) directly at checkout to elevate ticket averages without straining line cooks.</p>
-                    <p>Direct Margin Defense: Drive highly intentional, pre-closing on-premise seating during off-peak windows (8–11 PM) using explicit fixed-price anchors, completely preserving in-house cash flow and server tips from third-party app commission cuts.</p>
-                </div>
-                <div class="card-tile">
-                    <h3>Section 4: Campaign Execution Timeline Grid</h3>
-                    <p>Week 1: Launch & Baseline Momentum (June 5 – June 11)</p>
-                    <p>Friday, June 5 @ 9:30 AM MDT / 10:30 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #1: Campaign 1 Taco Innovation Launch. Introduction of the premium grilled street tacos layer explicitly paired with immediate high-margin starter prompts (Queso Blanco & Chips).</p>
-                    <p>Saturday, June 6 @ 10:30 AM MDT / 11:30 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #2: Campaign 1 Pivot Appetizer Accelerator Launch. High-margin appetizer and snack accelerator block featuring the shareable Triple Play tray to protect kitchen lines during weekend dinner slots.</p>
-                    <p>Friday, June 5 @ 2:30 PM MDT / 3:30 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #1: Premium Taco Innovation: The Sweet & Spicy Shrimp Tacos reveal. Focus on light grilled items to shield fryer lines from peak shift overload.</p>
-                    <p>Saturday, June 6 @ 3:30 PM MDT / 4:30 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #2: White Queso Blanco Weekend Driver. Content mirrored to Email #2 to highlight the shareable Triple Play platter and low-labor bar pairings.</p>
-                    <p>Tuesday, June 9 @ 8:00 AM MDT / 9:00 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #3: Midweek legacy ritual anchor. Driving on-premise volume to the ongoing BOGO Wing Wednesday footprint paired with $3 Domestic Pints All Day.</p>
-                </div>
-                    <p>Week 2: Loyalty Database Expansion (June 12 – June 18)</p>
-                    <p>Wednesday, June 10 @ 1:15 PM MDT / 2:15 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #3: BOGO Wings and $3 ice-cold domestic pints alert. Enforcing the 3:00 PM – 8:00 PM dinner pivot window across channels.</p>
-                    <p>Friday, June 12 @ 9:00 AM MDT / 10:00 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #4: Now Pouring Engine. High-margin asset deployment focusing on fast bar lines, cold taps, and crispy Fried Pickles baskets to boost casual turnaround.</p>
-                    <p>Friday, June 12 @ 2:30 PM MDT / 3:30 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #4: Core bar flow momentum focus. Visual highlight on machine-poured drafts and cold drinks to secure weekend on-premise volume.</p>
-                    <p>Tuesday, June 16 @ 8:30 AM MDT / 9:30 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #5: Weekend baseline reinforcement drive. Activating beverage-first messaging ($3 Domestic Pints / $4 Tito's) to establish constant value benchmarks across the region.</p>
-                    <p>Tuesday, June 16 @ 1:15 PM MDT / 2:15 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #5: Backyard patio atmosphere activation. Pushing open-air dining elements with generic live music hooks to intercept evening commute decisions.</p>
-                </div>
-                    <p>Week 3: High-Margin Starters Anchor (June 19 – June 25)</p>
-                    <p>Friday, June 19 @ 9:30 AM MDT / 10:30 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #6: Flow Optimization App Push. High-margin appetizer and snack accelerator block featuring the shareable Triple Play tray to protect kitchen lines during weekend dinner slots.</p>
-                    <p>Friday, June 19 @ 2:30 PM MDT / 3:30 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #6: Shareable appetizer lift focus. Tight, high-contrast visual display of our creamy Queso Blanco & Chips to secure early-arrival table check gains.</p>
-                    <p>Tuesday, June 23 @ 7:00 AM MDT / 8:00 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #7: Game-day value grid expansion. Promoting Loaded Frito Pie smothered in Earl's All Meat Chili and queso to accelerate high-speed checkout volume.</p>
-                    <p>Tuesday, June 23 @ 2:15 PM MDT / 3:15 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #7: Sports-bar lifestyle pairing push. Aligning flat-screen games with the double-beef D2' Burger and crispy Beer Battered Onion Rings.</p>
-                </div>
-                    <p>Week 4 & 5: Direct Margin Defense (June 26 – July 3)</p>
-                    <p>Friday, June 26 @ 9:30 AM MDT / 10:30 AM Central (Local Store Time)</p>
-                    <p>✉️ Managed Email #8: Core heritage validation deck. Presenting the craft behind the Original Original Burger explicitly combined with Fresh Cut Fries made from scratch right in the restaurant.</p>
-                    <p>Tuesday, June 30 @ 1:15 PM MDT / 2:15 PM Central (Local Store Time)</p>
-                    <p>📸 Organic Social #8: End-of-month burger craft narrative drive. Emphasizing mechanical crispy smashed patty edges and artisan bun layout to enforce long-term brand identity.</p>
-                    <p>Friday, July 3 @ 10:59 PM MDT / 11:59 PM Central (Local Store Time)</p>
-                    <p>📊 Operational Milestone: Complete Month 1 Toast Unified POS Revenue Review & Data Summary Extraction.</p>
-                </div>
-                <div class="card-tile">
-                    <h3>Section 5: Deep Dive Campaign Breakdowns</h3>
-                    <p><span class="bold-white">1. Campaign 1: The Flavor Reveal (Taco Innovation)</span></p>
-                    <p>Strategic Core: Highlight premium menu options like the Sweet & Spicy Shrimp Tacos. Utilizing grilled proteins maximizes kitchen speed and protects the fry station during busy weekend rushes.</p>
-                    <p>Founder Insight Quote: "We started out selling hamburgers, but our street tacos hit a sweet spot that completely changes the game. Grilling that shrimp fresh allows our kitchen to crank out killer flavor without catching the fry line on fire on a packed night."</p>
-                    <p>Media Asset Collection Workflow: Tight, high-saturation shots of blackened grilled shrimp, honey pepper slaw, and cotija cheese crumbles inside soft corn tortillas. Show the tacos directly on the steel tray liners used in-house.</p>
-                    <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Verify that high-res Sweet & Spicy Shrimp Taco close-up images are uploaded to the Brand Hub, or capture on next site shoot; otherwise deploy validated street taco placeholder alternative.]</p>
-                </div>
-                    <p><span class="bold-white">2. Campaign 2: Midweek Anchor (Wing Wednesday Ritual)</span></p>
-                    <p>Strategic Core: Leverage a legacy volume driver to increase profitable check sizes. Anchor the ongoing BOGO traditional or boneless wings promo strictly as a Dine In Only option, pairing it with machine-poured beverage value hooks to boost server tips and drive table turnaround.</p>
-                    <p>Founder Insight Quote: "Our regulars look forward to Wednesdays all week long. It’s an absolute ritual. We pair the BOGO wings with our $3 domestic pints because it keeps the execution lightning fast for the bar and keeps our tables packed."</p>
-                    <p>Media Asset Collection Workflow: Platter of boneless wings tossed in buffalo sauce, accompanied by celery sticks and house-made buttermilk ranch, backed by an icy domestic pint mug.</p>
-                    <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Confirm presence of wing basket layout with ranch ramification in Media files; otherwise create custom asset during service hours.]</p>
-                </div>
-                    <p><span class="bold-white">3. Campaign 3: The Backyard Ritual (Weekend Patio & Music)</span></p>
-                    <p>Strategic Core: Drive weekend on-premise volume for live music locations (Cross Roads, Nacogdoches) and brand-wide patios. Focus layout entirely on shareable starters (Queso Blanco & Chips) that require zero assembly time from back-of-house staff.</p>
-                    <p>Founder Insight Quote: "Bottlecap is built around the outdoor patio culture. When the weather is right and the live music kicks off on the stage, we want our tables filled with chips, white queso, and cold drinks. It's easy for the team and great for the crowd."</p>
-                    <p>Media Asset Collection Workflow: Wide shots of outdoor patios during twilight hours alongside macro images of the Triple Play dip tray (Queso Blanco, scratch salsa, hand-smashed guacamole).</p>
-                    <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Cross Roads & Nacogdoches stage/outdoor setting image link verification required; if unavailable, substitute with universal open-air patio asset.]</p>
-                </div>
-                    <p><span class="bold-white">4. Campaign 4: The Game-Day Gridiron (Sports & Spirits)</span></p>
-                    <p>Strategic Core: Establish Bottlecap Alley as the ultimate local sports bar destination. Maximize brand recognition in competitive territories like Grapevine and the upcoming Euless corridor by highlighting the visual power of the D2' Burger and Loaded Frito Pie combined with zero-friction add-ons.</p>
-                    <p>Founder Insight Quote: "We love our sports bar roots. When the game goes live on the big screens, we want to see a packed house. Pushing items like Loaded Frito Pie or the D2' Burger alongside a quick pour of a cold pint means our guests get hot food fast, and we keep the line moving smoothly."</p>
-                    <p>Media Asset Collection Workflow: Sliced double-beef D2' Burger highlighting fresh grill lines, melted American cheese, and the artisan bun structure, backed by game screens blurred in the distance.</p>
-                    <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Verify that Loaded Frito Pie or D2' Burger layout photos are validated within the system; if missing, schedule immediate alternative asset swap lines.]</p>
-                </div>
-                <div class="card-tile">
-                    <h3>Section 6: Complete Content Deliverables</h3>
-                    <p><span class="bold-white">1. Long-Form Managed Emails (8 Clean Decks)</span></p>
-                </div>
-                    <p>Managed Email 1: Campaign 1 Launch (Taco Reveal)</p>
-                    <p>[DEPLOY METADATA: June 5, 2026 | Friday | 9:30 AM MDT / 10:30 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: Grilled shrimp meets hot honey glaze 🌮</p>
-                    <p>Preview Text: Step up your dinner routine at Bottlecap Alley.</p>
-                    <p>Body Copy Block:</p>
-                    <p>WHAT'S NEW ON THE MENU?</p>
-                    <p>Sizzle into the week with the all-new Sweet & Spicy Shrimp Tacos. We take lightly blackened grilled shrimp and top it off with our hot honey glaze, honey pepper slaw, cotija cheese, cilantro, and a drizzle of house-made jalapeno ranch inside soft corn tortillas. Served up fresh with charro beans and chips & salsa.</p>
-                    <p>Our grills are hot, the AC is humming inside, and we've got a cold stool waiting at the bar with your name on it. Skip the grocery line and join us for dinner tonight.</p>
-                    <p>Pair your taco plate with our legendary Queso Blanco & Chips—creamy white queso served fresh with pico de gallo. It's the perfect zero-friction start to a killer meal.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm high-res Sweet & Spicy Shrimp Taco close-up tray shot exists in Brand Hub, or capture on next food shoot.]</p>
-                    <p>Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</p>
-                    <p>Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</p>
-                </div>
-                    <p>Managed Email 2: Campaign 1 Pivot (Appetizer Accelerator)</p>
-                    <p>[DEPLOY METADATA: June 6, 2026 | Friday | 10:30 AM MDT / 11:30 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: White queso blanco is on tap for the weekend 🧀</p>
-                    <p>Preview Text: The patio is calling. Start the weekend at Bottlecap Alley.</p>
-                    <p>Body Copy Block:</p>
-                    <p>TRACK THE WEEKEND RUSH</p>
-                    <p>The weekend has officially arrived, the stadium screens are lit, and the patio doors are open. Skip the cooking lines tonight and get straight to relaxing with the ultimate table starter loop.</p>
-                    <p>Our house-favorite Queso Blanco & Chips features premium white queso blended with fresh pico de gallo, served hot alongside fresh tortilla chips. It’s an effortless neighborhood casual patio favorite that rolls from our kitchen to your table instantly—giving you zero-friction comfort the second you sit down.</p>
-                    <p>Looking for a full layout? Upgrade the crew to our legendary Triple Play tray to grab our white queso, signature scratch salsa recipe, and homemade guacamole served up alongside a mountain of freshly made tortilla chips. Pair it up with an ice-cold $3 Domestic Pint or a fresh $4 Tito's straight from the bar.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Use confirmed image of white queso tray pull or composite Triple Play line from local media folder.]</p>
-                    <p>Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</p>
-                    <p>Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</p>
-                </div>
-                    <p>Managed Email 3: Campaign 2 Launch (Wing Wednesday)</p>
-                    <p>[DEPLOY METADATA: June 9, 2026 | Tuesday | 8:00 AM MDT / 9:00 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: Tomorrow is the ultimate midweek ritual 🍗</p>
-                    <p>Preview Text: BOGO Wings are calling your name at Bottlecap Alley.</p>
-                    <p>Body Copy Block:</p>
-                    <p>WING WEDNESDAY IS ON</p>
-                    <p>Get your game plan ready for tomorrow. Join us for our weekly Wing Wednesday ritual and grab Buy One Get One FREE Wings from 3:00 PM to 8:00 PM. Traditional bone-in or our hand-breaded boneless marinated chicken fingers—the choice is completely yours.</p>
-                    <p>Toss them in your favorite house wing flavor and pair them up with clean celery sticks and our house-made buttermilk ranch.</p>
-                    <p>To wrap up the perfect midweek pairing, we are NOW POURING $3 Domestic Pints ALL DAY LONG. Just ice-cold beer and hot wings served straight to your table.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm presence of wing basket layout with ranch ramification in Media files.]</p>
-                    <p>Location Footer Customization Engine: * All Locations: Wing Promo Active 3:00 PM – 8:00 PM | Dine In Only.</p>
-                </div>
-                    <p>Managed Email 4: Campaign 2 Focus (Drinks & Wings)</p>
-                    <p>[DEPLOY METADATA: June 12, 2026 | Friday | 9:00 AM MDT / 10:00 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: Cold domestic pints are now pouring 🍻</p>
-                    <p>Preview Text: Grab an icy mug at Bottlecap Alley today.</p>
-                    <p>Body Copy Block:</p>
-                    <p>NOW POURING ALL DAY LONG</p>
-                    <p>Keep the weekend routine simple. Pull up a stool at the bar because we are pouring $3 Domestic Pints ALL DAY LONG across every single one of our locations.</p>
-                    <p>When the kitchen is humming and the crowds roll in, our bar team keeps the execution lightning fast so you never have to wait for an icy refill. Pair that cold pint with a basket of our Fried Pickles—hand-battered and fried to golden brown perfection, served up fresh with our house-made Hidden Valley Ranch.</p>
-                    <p>Bring the family down, claim your spot on the patio, and enjoy a true Bottlecap Alley environment.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Use standard bar draft pour visual asset or update with fresh baseline imagery.]</p>
-                    <p>Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</p>
-                    <p>Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</p>
-                </div>
-                    <p>Managed Email 5: Campaign 3 Launch (Patio Culture)</p>
-                    <p>[DEPLOY METADATA: June 16, 2026 | Tuesday | 8:30 AM MDT / 9:30 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: Twilight, live music, and cold drinks 🎸</p>
-                    <p>Preview Text: Hit the patio at Bottlecap Alley.</p>
-                    <p>Body Copy Block:</p>
-                    <p>THE BACKYARD PATIO RITUAL</p>
-                    <p>There is nothing quite like a Texas sunset on an open outdoor patio. This weekend, we are cranking up the stadium lights and hosting live music stages at select backyard locations.</p>
-                    <p>Skip the cooking stress and come share a Triple Play tray with the table. You get a massive layout of our queso blanco, signature scratch salsa recipe, and homemade guacamole served alongside a mountain of freshly made tortilla chips.</p>
-                    <p>Our servers are ready, the patio seats are open, and the music sets face the crowd this weekend. Come claim your table early.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Cross Roads & Nacogdoches stage/outdoor setting image link verification required.]</p>
-                    <p>Location Footer Customization Engine: * All Locations: Live music active on select patio setups. Check local store lines. Dine In Only.</p>
-                </div>
-                    <p>Managed Email 6: Campaign 3 Focus (Appetizer Lift)</p>
-                    <p>[DEPLOY METADATA: June 19, 2026 | Friday | 9:30 AM MDT / 10:30 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: White queso blanco is ready to dip 🧀</p>
-                    <p>Preview Text: Start your weekend right at Bottlecap Alley.</p>
-                    <p>Body Copy Block:</p>
-                    <p>OPERATIONALLY QUICK. LEGENDARY TASTE.</p>
-                    <p>When the weekend rush hits, we make sure our most popular appetizers are ready to roll out to your table instantly. Our house-favorite Queso Blanco & Chips features premium white queso blended with fresh pico de gallo, served hot alongside fresh tortilla chips. It’s an effortless table classic that lets you start snacking the second you sit down.</p>
-                    <p>Pair your dip tray up with an ice-cold drink from the bar. We are pouring $4 Tito's all evening long to keep the vibes right and the check sizes simple.</p>
-                    <p>Head over to the patio, enjoy the cool breeze, and let our team handle the hospitality.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm white queso chip-pull detail visual asset is locked inside backend platform.]</p>
-                    <p>Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</p>
-                    <p>Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</p>
-                </div>
-                    <p>Managed Email 7: Campaign 4 Launch (Sports / Loaded Frito Pie)</p>
-                    <p>[DEPLOY METADATA: June 23, 2026 | Tuesday | 7:00 AM MDT / 8:00 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: Earl's meaty chili meets white queso blanco 🏈</p>
-                    <p>Preview Text: Catch the Rangers live at Bottlecap Alley.</p>
-                    <p>Body Copy Block:</p>
-                    <p>THE ULTIMATE SPORTS BAR FOOTPRINT</p>
-                    <p>When the game goes live on our big screens, the energy at Bottlecap Alley is unmatched. Fuel your fandom this week with our brand-wide favorite Loaded Frito Pie—Fritos smothered completely in our homemade Earl's meaty chili, creamy queso blanco, fresh pico de gallo, and jalapenos.</p>
-                    <p>Looking for a heavy-hitting burger lineup? Try the D2' Burger—two fresh patties smashed right on the grill, double American cheese, lettuce, tomatoes, onions, and pickles on a fresh bun. Pair it with our old-fashioned Tater Tots or crispy Beer Battered Onion Rings fried golden brown.</p>
-                    <p>Our flat screens are tuned to the game, the indoor AC is running crisp, and the beer lines are cold. Bring the crew down and catch every play live.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm separate Loaded Frito Pie or burger alignment photo asset is validated.]</p>
-                    <p>Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</p>
-                    <p>Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</p>
-                </div>
-                    <p>Managed Email 8: Campaign 4 Focus (Final Check Lift)</p>
-                    <p>[DEPLOY METADATA: June 26, 2026 | Friday | 9:30 AM MDT / 10:30 AM Central Local]</p>
-                    <p>Target Audience: All Location CRM Database</p>
-                    <p>Subject Line: Smashed on the grill since day one 🍔</p>
-                    <p>Preview Text: Fresh, never frozen burgers at Bottlecap Alley.</p>
-                    <p>Body Copy Block:</p>
-                    <p>FRESH. NEVER FROZEN. GRINDED DAILY.</p>
-                    <p>At Bottlecap Alley, we built our name on doing burgers the right way. We take a proprietary blend of fresh beef that is grinded daily, ship it straight to our stores without ever touching a freezer, and smash it down on the grill the exact second you order to lock in those crispy, seasoned edges.</p>
-                    <p>Try the legendary Original Original Burger today. Make it a complete basket by adding our Fresh Cut Fries made from scratch right in the restaurant—by cutting real potatoes right in the building every single day.</p>
-                    <p>No corporate tricks, no frozen patties—just an authentic Texas burger paired with a cold $3 Domestic Pint or $4 Tito's poured straight from the machine.</p>
-                    <p>[Button Link Type: Website] -> VISIT OUR WEBSITE</p>
-                    <p>Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Use visual champion photo of Original Original Burger with visible grill smash edges.]</p>
-                    <p>Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</p>
-                    <p>Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</p>
-                </div>
-                    <p><span class="bold-white">2. Broadcast SMS Pushes (4 Characters-Compliant Campaigns)</span></p>
-                    <p>STATUS NOTE: PER RECONNAISSANCE, ALL BROADCAST SMS CAMPAIGNS ARE OFFICIALLY PAUSED FOR MONTH 1 TO PROTECT OVERHEAD INVOICING CAPACITY WHILE OWNED DATABASE GENERATION TAKES PLACE THROUGH TOAST WEBSITE MIGRATION LOGISTICS.</p>
-                </div>
-                    <p><span class="bold-white">3. Organic Social Posts (8 Comprehensive Copy Decks)</span></p>
-                </div>
-                    <p>Social Post 1: Campaign 1 Hook (Taco Reveal)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 5, 2026 | Friday | 2:30 PM MDT / 3:30 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Tight, high-resolution shot of the Sweet & Spicy Shrimp Tacos on a clean steel tray liner. Ensure the lime wedge is visibly squeezed over the blackened grilled shrimp, highlighting the fresh texture of the honey pepper slaw and cotija cheese. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>WHAT'S NEW ON THE MENU? 🌮🔥</p>
-                    <p>Meet the all-new Sweet & Spicy Shrimp Tacos. We take lightly blackened grilled shrimp and stack them inside soft corn tortillas with our honey pepper slaw, cotija cheese, fresh cilantro, and a kick of house-made jalapeno ranch. Served with charro beans and chips & salsa!</p>
-                    <p>Operationally, our kitchen has the grills fired up to drop these hot to your table fast, meaning your crew spends less time waiting and more time hanging out on the patio. Pair it up with a side of our creamy Queso Blanco & Chips for the ultimate text-mex pairing.</p>
-                    <p>Pull up a stool at your local patio tonight! 🍻</p>
-                    <p>#BottlecapAlley #TexasCasual #ShrimpTacos #NacogdochesEats #CrossRoadsTX #GrapevineFoodies #GreenvilleEats #CorsicanaFood #DineInTexas #PatioRitual</p>
-                </div>
-                    <p>Social Post 2: Campaign 1 Pivot (Queso Blanco App Accelerator)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 6, 2026 | Friday | 3:30 PM MDT / 4:30 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Clean, appealing shot of a hot tray of Queso Blanco & Chips sitting center table on an outdoor wood patio surface. Highlight a chip breaking the surface film of the melted white cheese layout, with pico de gallo visible on top. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>WHITE QUESO BLANCO IS READY 🧀☀️</p>
-                    <p>The weekend has officially rolled into Bottlecap Alley, stadium screens are glowing, and our neighborhood casual patio tables are open. BOH has our house-favorite Queso Blanco & Chips prepped and ready to hit your table the exact second you claim a seat.</p>
-                    <p>This is an absolute backyard favorite—premium white cheese blended hot with fresh pico de gallo, served alongside a mountain of crispy tortilla chips. Want to upgrade the table layout? Ask the team for the massive Triple Play tray to grab our white queso, signature scratch salsa, and hand-smashed guacamole all at once. 🥑</p>
-                    <p>Head over, skip the cooking line, and let us pour you a $3 Domestic Pint or $4 Tito's to start the weekend right! Dine In Only.</p>
-                    <p>#QuesoBlanco #TriplePlayDips #BottlecapAlley #PatioVibes #FreshCut #NacogdochesEats #CrossRoadsEats #GrapevineEats #GreenvilleEats #CorsicanaFood</p>
-                </div>
-                    <p>Social Post 3: Campaign 2 Hook (Wing Wednesday)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 10, 2026 | Wednesday | 1:15 PM MDT / 2:15 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Overhead, geometric shot of traditional bone-in wings tossed in glowing buffalo sauce, flanked by clean celery sticks and an icy, condensation-covered mug of domestic beer. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>WING WEDNESDAY IS ACTIVE! 🍗🍻</p>
-                    <p>The midweek backyard ritual is officially live across all five locations. Come smash a plate of our Buy One Get One FREE Wings from 3:00 PM to 8:00 PM today! Traditional bone-in or our hand-breaded boneless marinated chicken fingers tossed fresh in your favorite house sauce.</p>
-                    <p>We are pairing the wing plates up by NOW POURING $3 Domestic Pints ALL DAY LONG. Ice-cold beer and hot wings served straight to your table.</p>
-                    <p>Dine In Only. Pull up a chair and let our team handle the rest! 🙌</p>
-                    <p>#WingWednesday #BOGOWings #HandBreaded #NowPouring #ColdPints #BottlecapAlley #GreenvilleEats #CrossRoadsEats #NacogdochesFood #DineInOnly</p>
-                </div>
-                    <p>Social Post 4: Campaign 2 Momentum (Drink/App Focus)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 12, 2026 | Friday | 2:30 PM MDT / 3:30 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Action shot of a bartender pouring an ice-cold mug from the tap line or machine, with a crispy golden basket of Wisconsin Fried Cheese curds sitting hot on the bar countertop. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>NOW POURING ALL DAY LONG 🍺🧀</p>
-                    <p>We keep the bar execution lightning fast so you can get an icy refill the exact second your table needs it. We are pouring $3 Domestic Pints ALL DAY LONG across every single Bottlecap Alley location.</p>
-                    <p>Complete the bar lineup with a basket of our Fried Pickles—hand-battered and fried to golden brown perfection, served up fresh with our scratch-made Hidden Valley Ranch. 🍟</p>
-                    <p>The game is live on the big screens and the indoor AC is running cold. Come find a stool! Dine In Only.</p>
-                    <p>#BottlecapAlley #TexasSportsBar #FriedCheese #ColdBeer #BarStoolVibes #GrapevineTX #CorsicanaTexas #NacogdochesRegulars #PatioVibes</p>
-                </div>
-                    <p>Social Post 5: Campaign 3 Hook (Patio/Live Music)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 16, 2026 | Tuesday | 1:15 PM MDT / 2:15 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Wide sunset shot of the Nacogdoches or Cross Roads outdoor patio structures, showing the live music stage lights kicking on, with a Triple Play dip plate prominent in the foreground. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>PATIO WEATHER & LIVE MUSIC 🎸✨</p>
-                    <p>Twilight is hitting the neighborhood casual patio setups just right. Tonight, our live music stages are fired up to deliver the ultimate weekend atmosphere at our local music spots.</p>
-                    <p>Bring the entire family down and start the table off with our legendary Triple Play tray—creamy white queso, scratch-made salsa packed with fresh tomatoes, and homemade guacamole served up hot with freshly made tortilla chips. 🥑</p>
-                    <p>Great tunes, cold drinks, and zero-friction hospitality. Come claim your patio table early! Dine In Only.</p>
-                    <p>#BottlecapAlley #LiveMusicTexas #PatioRitual #TriplePlayDips #BackyardVibes #NacogdochesMusic #CrossRoadsLive #TexasSunset</p>
-                </div>
-                    <p>Social Post 6: Campaign 3 Momentum (Regulars Target)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 19, 2026 | Friday | 2:30 PM MDT / 3:30 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Tight macro shot of a chip pulling a thick stream of white queso out of the Brisket Queso & Chips bowl, highlighting chunks of smoked brisket and fresh pico. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>OPERATIONALLY FAST. INSTANT COMFORT. 🧀🔥</p>
-                    <p>When the weekend rush hits, our kitchen keeps the lines moving smoothly by prepping our heavy-hitting appetizers to roll out instantly. Our house-favorite Queso Blanco & Chips is poured straight to your table so you can start snacking immediately.</p>
-                    <p>Level up with our Brisket Queso & Chips loaded with smoked brisket and fresh pico de gallo. Balance out the heat by grabbing a $4 Tito's poured fresh at the bar all evening long. 🍸</p>
-                    <p>Pull up a stool and relax under the Texas sky! Dine In Only.</p>
-                    <p>#QuesoBlanco #SmokedBrisket #TitosTime #BottlecapAlley #FastHospitality #GreenvillePatio #GrapevineFood #CorsicanaRegulars #BackyardDining</p>
-                </div>
-                    <p>Social Post 7: Campaign 4 Hook (Sports/D2 Burger)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 23, 2026 | Tuesday | 2:15 PM MDT / 3:15 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Close-up of the double-beef, double-cheese D2' Burger sitting next to a hot order of brand-wide favorite Loaded Frito Pie smothered in Earl's chili and queso. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>LOADED FRITO PIE & BIG GAME VIBES 🏈💥</p>
-                    <p>Catch the game live at the ultimate local sports bar. We are loading up tables with our brand-wide classic Loaded Frito Pie—Fritos smothered in our homemade chili, queso, fresh pico, and jalapenos.</p>
-                    <p>Fuel the crew with our heavy-hitting D2' Burger—two layers of fresh, never frozen beef blend and double American cheese smashed right on the grill. Maximize the experience by adding a side of old-fashioned Tater Tots or crispy Beer Battered Onion Rings. 🧅</p>
-                    <p>Our flat screens are locked on the game and the draft lines are running ice cold. Bring the crew down tonight! Dine In Only.</p>
-                    <p>#SportsBarTexas #FritoPie #D2Burger #FreshNeverFrozen #SmashedOnTheGrill #GameDayVibes #GrapevineSports #CrossRoadsFood #GreenvilleBurgers</p>
-                </div>
-                    <p>Social Post 8: Campaign 4 Momentum (Burger Craft Narrative)</p>
-                    <p>Deployment Target: Facebook & Instagram</p>
-                    <p>Deployment Timing: [June 30, 2026 | Tuesday | 1:15 PM MDT / 2:15 PM Central Local Store Time]</p>
-                    <p>Visual Direction: Clean, crisp shot of the Original Original Burger showcased on a wooden board or steel tray, emphasizing the crispy smashed edges of the fresh patty protruding past the artisan bun line. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</p>
-                    <p>Caption Copy Block:</p>
-                    <p>FRESH. NEVER FROZEN. GRINDED DAILY. 🛠️🍔</p>
-                    <p>Since day one, we've kept our burger promise simple. No frozen patties, no pre-packaged corporate shortcuts. We take a fresh beef blend grinded daily, ship it straight to our five stores, and smash it down on the grill the exact second you order to lock in those crispy, legendary edges.</p>
-                    <p>Come sink your teeth into the classic Original Original Burger today. Make it a complete basket by adding our Fresh Cut Fries made from scratch right in the restaurant—by cutting real potatoes right in the building every single day. 🍟</p>
-                    <p>Pair it with a $3 Domestic Pint All Day Long and enjoy real, unpretentious Texas hospitality. Dine In Only.</p>
-                    <p>#OriginalOriginal #SmashedOnTheGrill #FreshCutFries #FromScratch #BottlecapAlley #BurgerLovers #CorsicanaEats #NacogdochesEats #GrapevineEats</p>
-                </div>
-                <div class="card-tile">
-                    <h3>Section 7: Performance Metrics & Dashboard KPIs</h3>
-                    <p><span class="bold-white">1. POS Metrics Tracking Loops</span></p>
-                    <p>All multi-unit location data tracking loops must interface directly through the unified Toast POS platform backend across all 5 operational locations, completely eliminating the data disconnect between independent legacy platforms.</p>
-                    <p>Primary POS Conversion KPI: Total transaction footprint conversion from anonymous foot traffic to owned digital CRM profiles (Target: 15% database expansion over 28 days via Toast Website sign-ups).</p>
-                    <p>Return Rate Momentum: Direct monitoring of the 59.7% returning guest baseline to track return cadence tightening without relying on blanket discounting mechanisms.</p>
-                </div>
-                    <p><span class="bold-white">2. Automated Modifier Check-Size Lift Data</span></p>
-                    <p>Tracking of the Fresh Cut Fries attach-rate mechanics when pushed as a basket upgrade from standalone burger line transactions (Target: 8% lift in baseline modifier sales volume).</p>
-                    <p>Monitoring automated checkout prompts pairing low-margin entrée options with high-margin, low-labor appetizer anchors (Queso Blanco & Chips / Triple Play tray).</p>
-                </div>
-                    <p><span class="bold-white">3. Saved Third-Party App Commission Totals</span></p>
-                    <p>Direct audit tracking of on-premise conversion lines. Because campaigns strictly utilize "butts-in-seats" language, all generated traffic preserves direct in-house cash flow, bypasses third-party aggregator delivery commission cuts, and protects server tips.</p>
-                </div>
-                    <p><span class="bold-white">4. Data Review Checkpoint Technical Blueprint</span></p>
-                    <p>AUTOMATED POS DATA EXTRACTION LAYER: The unified software platform completes its final core balance calculation precisely on July 3 at 11:59 PM. This metric compile automatically measures check increases and website consolidation lines before unlocking next-month marketing deployment gates.</p>
-                </div>
-                    <p>5. Next-Month Strategy Activation Gates</p>
-                    <p>Gate 1 (Website Migration Success): If Toast Website migration metrics reflect successful data consolidation across all 5 locations, unlock automated "Welcome Back" email triggers based on guest return cadence intervals.</p>
-                    <p>Gate 2 (SMS Database Readiness): If organic text-club opt-in fields on the new website cross a critical subscriber threshold across individual stores, initialize the scheduled Info Call on SMS logistics to review exact per-message invoicing costs before activating Phase 2 broadcast text tools.</p>
+<div class="slide-container">
+    <div class="slide-header">
+        <span class="brand-tag">Bottlecap Alley</span>
+        <span class="ctx-tag">PART 1: The Master Strategic Document Copy Deck</span>
+    </div>
+    <div class="slide-body">
+    </div>
+    <div class="slide-footer"><span>Month 1 Strategic Growth Roadmap</span><span>Slide 1</span></div>
+</div>
+
+<div class="slide-container">
+    <div class="slide-header">
+        <span class="brand-tag">Bottlecap Alley</span>
+        <span class="ctx-tag">Section 1: Brand Voice Playbook</span>
+    </div>
+    <div class="slide-body">
+        <h2>1. Brand Voice Identity & Personality</h2>
+        <p>Bottlecap Alley operates digitally and physically as an authentic, high-energy Texas casual hub. The persona is unpretentious, casual, and deeply rooted in local Texas backyard culture. It speaks as a welcoming neighborhood institution that balances sports bar energy and live music with a family-friendly atmosphere.</p>
+        <h2>2. Approved Technical BOH Action Descriptions</h2>
+        <p>All copy layers must adhere to the exact mechanical preparation words used in the restaurants:</p>
+        <div class="stretch-row">
+            <div class="stretch-card">
+                <h3>Burgers: Must be explicitly described as "fresh, never frozen," "grinded daily," and "smashed right on the grill" served on a fresh bun, brioche bun, or Texas toast.</h3>
             </div>
-            <div class="right-column-visual" style="text-align: center;">
-                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=500&q=80" class="ai-visual-frame" alt="Gourmet Fried Chicken Asset">
-                <p style="font-size: 11px; color: #666;">automated design placeholder active</p>
+            <div class="stretch-card">
+                <h3>Fries: Must strictly use the combined menu nomenclature: "Fresh Cut Fries made from scratch right in the restaurant" or "fresh hand-cut fries."</h3>
+                <p>Battered / Prepared Elements: Must use the terms "hand-battered," "fried to golden brown perfection," and "our scratch recipe" when detailing items like Earl's All Meat Chili, signature scratch salsa recipe, or homemade guacamole.</p>
+            </div>
+        </div>
+        <h2>3. Tone, Pacing, and Sentence Cadence Rules</h2>
+        <p>Pacing: Punchy, urgent, and front-loaded. Content must emphasize value positions or event hooks using capitalized text anchors for rapid smartphone scannability.</p>
+        <p>Cadence: Short, staccato sentences and conversational fragments that mirror authentic Texan spoken dialogue.</p>
+        <div class="stretch-row">
+            <div class="stretch-card">
+                <h3>The Structural Loop: State the Craving/Day $\rightarrow$ State the Explicit Fixed Price $\rightarrow$ Enforce the On-Premise Constraint.</h3>
+            </div>
+        </div>
+        <h2>4. Banned Corporate Jargon & Absolute Guardrails</h2>
+        <p>THE BANNED LIST: Culinary buzzwords such as gourmet, hand-crafted, artisanal curation, fusion, price drop, save a dollar, or percentage off discounts are strictly prohibited. Internal campaign setup parameters, system logic notes, or conversation references must never bleed into customer-facing copy layers.</p>
+        <p>THE EXACT-PRICE MANDATE: Abstract promo claims are completely banned. Copy must state the absolute fixed price point: "$3 Domestic Pints All Day Long", "$4 Tito's", "$3 Margaritas", or "$5 Queso Blanco & Chips".</p>
+        <p>THE BUTTS-IN-SEATS MANDATE: Because Fresh Cut Fries made from scratch do not travel well off-premise, off-premise call-to-actions ("Order Online", "To-Go") are entirely retired. All copy utilizes physical, presence-driven verbs: Head over, pull up a stool, hit the patio, join us at the bar.</p>
+    </div>
+    <div class="slide-footer"><span>Month 1 Strategic Growth Roadmap</span><span>Slide 2</span></div>
+</div>
+
+<div class="slide-container">
+    <div class="slide-header">
+        <span class="brand-tag">Bottlecap Alley</span>
+        <span class="ctx-tag">Section 2: Business Profile & Strategic Context</span>
+    </div>
+    <div class="slide-body">
+        <h2>1. Multi-Unit Store Breakdown & Operating Schedules</h2>
+        <p>Marketing schedules are tracked across five corporate stores with specific operational constraints based on closing times and menu categories:</p>
+        <p>Bottlecap Alley - CORSICANA (1208 W. 7th Ave) | Hours: 8:00 AM – 11:00 PM | All evening pushes stop by 9:00 PM. Features unique Grills & Skillet Nachos lines to protect margins.</p>
+        <p>Bottlecap Alley - CROSS ROADS (11990 US Hwy 380) | Hours: 8:00 AM – 11:45 PM | Verified Live Music Location. Target dinner service blocks.</p>
+        <p>Bottlecap Alley - GRAPEVINE (1469 W. State Hwy 114) | Hours: 8:00 AM – 11:45 PM | Est. 2010. High anonymous footprint. Pushes top-of-funnel PMAX and the "Kali-fornie" Chicken Sandwich.</p>
+        <p>Bottlecap Alley - GREENVILLE (5804 Wesley St) | Hours: 8:00 AM – 11:45 PM | High-volume transit hub. Features the heavy-hitting D2' Burger paired with Earl's Chili Cheese Fries.</p>
+        <p>Bottlecap Alley - NACOGDOCHES (3203 North Street) | Hours: 8:00 AM – 11:45 PM | Verified Live Music Location. Core 30–50 age block. Requires immediate loyalty re-calibration to stop point drainage.</p>
+        <h2>2. The Core Data & Revenue Problems</h2>
+        <p>The operations face an explicit structural bottleneck: transaction volumes are maxing out kitchen capacities during peak hours, yet the digital database remains heavily obscured by anonymous "Ghost Guests." Concurrently, the regular guest base is over-redeeming the legacy low-threshold loyalty system, causing significant margin erosion on core items.</p>
+        <h2>3. Strategic Marketing Pillars</h2>
+        <p>Audience Unmasking (Consolidation): Leverage the unified Toast Website migration to convert anonymous checkout volume into owned digital profiles (Email database expansion) without launching blanket, margin-draining discounts.</p>
+        <p>Zero-Friction Modifier Lift: Structurally pair top-of-funnel visual anchors (like the Original Original Burger) with operationally simple, high-margin accompaniments (Queso Blanco & Chips, machine-poured beers/margaritas) directly at checkout to elevate ticket averages without straining line cooks.</p>
+        <p>Direct Margin Defense: Drive highly intentional, pre-closing on-premise seating during off-peak windows (8–11 PM) using explicit fixed-price anchors, completely preserving in-house cash flow and server tips from third-party app commission cuts.</p>
+    </div>
+    <div class="slide-footer"><span>Month 1 Strategic Growth Roadmap</span><span>Slide 3</span></div>
+</div>
+
+<div class="slide-container">
+    <div class="slide-header">
+        <span class="brand-tag">Bottlecap Alley</span>
+        <span class="ctx-tag">Section 4: Campaign Execution Timeline Grid</span>
+    </div>
+    <div class="slide-body">
+        <p>Week 1: Launch & Baseline Momentum (June 5 – June 11)</p>
+        <p>Friday, June 5 @ 9:30 AM MDT / 10:30 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #1: Campaign 1 Taco Innovation Launch. Introduction of the premium grilled street tacos layer explicitly paired with immediate high-margin starter prompts (Queso Blanco & Chips).</p>
+        <p>Saturday, June 6 @ 10:30 AM MDT / 11:30 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #2: Campaign 1 Pivot Appetizer Accelerator Launch. High-margin appetizer and snack accelerator block featuring the shareable Triple Play tray to protect kitchen lines during weekend dinner slots.</p>
+        <p>Friday, June 5 @ 2:30 PM MDT / 3:30 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #1: Premium Taco Innovation: The Sweet & Spicy Shrimp Tacos reveal. Focus on light grilled items to shield fryer lines from peak shift overload.</p>
+        <p>Saturday, June 6 @ 3:30 PM MDT / 4:30 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #2: White Queso Blanco Weekend Driver. Content mirrored to Email #2 to highlight the shareable Triple Play platter and low-labor bar pairings.</p>
+        <p>Tuesday, June 9 @ 8:00 AM MDT / 9:00 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #3: Midweek legacy ritual anchor. Driving on-premise volume to the ongoing BOGO Wing Wednesday footprint paired with $3 Domestic Pints All Day.</p>
+        <p>Week 2: Loyalty Database Expansion (June 12 – June 18)</p>
+        <p>Wednesday, June 10 @ 1:15 PM MDT / 2:15 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #3: BOGO Wings and $3 ice-cold domestic pints alert. Enforcing the 3:00 PM – 8:00 PM dinner pivot window across channels.</p>
+        <p>Friday, June 12 @ 9:00 AM MDT / 10:00 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #4: Now Pouring Engine. High-margin asset deployment focusing on fast bar lines, cold taps, and crispy Fried Pickles baskets to boost casual turnaround.</p>
+        <p>Friday, June 12 @ 2:30 PM MDT / 3:30 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #4: Core bar flow momentum focus. Visual highlight on machine-poured drafts and cold drinks to secure weekend on-premise volume.</p>
+        <p>Tuesday, June 16 @ 8:30 AM MDT / 9:30 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #5: Weekend baseline reinforcement drive. Activating beverage-first messaging ($3 Domestic Pints / $4 Tito's) to establish constant value benchmarks across the region.</p>
+        <p>Tuesday, June 16 @ 1:15 PM MDT / 2:15 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #5: Backyard patio atmosphere activation. Pushing open-air dining elements with generic live music hooks to intercept evening commute decisions.</p>
+        <p>Week 3: High-Margin Starters Anchor (June 19 – June 25)</p>
+        <p>Friday, June 19 @ 9:30 AM MDT / 10:30 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #6: Flow Optimization App Push. High-margin appetizer and snack accelerator block featuring the shareable Triple Play tray to protect kitchen lines during weekend dinner slots.</p>
+        <p>Friday, June 19 @ 2:30 PM MDT / 3:30 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #6: Shareable appetizer lift focus. Tight, high-contrast visual display of our creamy Queso Blanco & Chips to secure early-arrival table check gains.</p>
+        <p>Tuesday, June 23 @ 7:00 AM MDT / 8:00 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #7: Game-day value grid expansion. Promoting Loaded Frito Pie smothered in Earl's All Meat Chili and queso to accelerate high-speed checkout volume.</p>
+        <p>Tuesday, June 23 @ 2:15 PM MDT / 3:15 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #7: Sports-bar lifestyle pairing push. Aligning flat-screen games with the double-beef D2' Burger and crispy Beer Battered Onion Rings.</p>
+        <p>Week 4 & 5: Direct Margin Defense (June 26 – July 3)</p>
+        <p>Friday, June 26 @ 9:30 AM MDT / 10:30 AM Central (Local Store Time)</p>
+        <p>✉️ Managed Email #8: Core heritage validation deck. Presenting the craft behind the Original Original Burger explicitly combined with Fresh Cut Fries made from scratch right in the restaurant.</p>
+        <p>Tuesday, June 30 @ 1:15 PM MDT / 2:15 PM Central (Local Store Time)</p>
+        <p>📸 Organic Social #8: End-of-month burger craft narrative drive. Emphasizing mechanical crispy smashed patty edges and artisan bun layout to enforce long-term brand identity.</p>
+        <p>Friday, July 3 @ 10:59 PM MDT / 11:59 PM Central (Local Store Time)</p>
+        <p>📊 Operational Milestone: Complete Month 1 Toast Unified POS Revenue Review & Data Summary Extraction.</p>
+    </div>
+    <div class="slide-footer"><span>Month 1 Strategic Growth Roadmap</span><span>Slide 4</span></div>
+</div>
+
+<div class="slide-container">
+    <div class="slide-header">
+        <span class="brand-tag">Bottlecap Alley</span>
+        <span class="ctx-tag">Section 5: Deep Dive Campaign Breakdowns</span>
+    </div>
+    <div class="slide-body">
+        <h2>1. Campaign 1: The Flavor Reveal (Taco Innovation)</h2>
+        <p>Strategic Core: Highlight premium menu options like the Sweet & Spicy Shrimp Tacos. Utilizing grilled proteins maximizes kitchen speed and protects the fry station during busy weekend rushes.</p>
+        <p>Founder Insight Quote: "We started out selling hamburgers, but our street tacos hit a sweet spot that completely changes the game. Grilling that shrimp fresh allows our kitchen to crank out killer flavor without catching the fry line on fire on a packed night."</p>
+        <p>Media Asset Collection Workflow: Tight, high-saturation shots of blackened grilled shrimp, honey pepper slaw, and cotija cheese crumbles inside soft corn tortillas. Show the tacos directly on the steel tray liners used in-house.</p>
+        <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Verify that high-res Sweet & Spicy Shrimp Taco close-up images are uploaded to the Brand Hub, or capture on next site shoot; otherwise deploy validated street taco placeholder alternative.]</p>
+        <h2>2. Campaign 2: Midweek Anchor (Wing Wednesday Ritual)</h2>
+        <p>Strategic Core: Leverage a legacy volume driver to increase profitable check sizes. Anchor the ongoing BOGO traditional or boneless wings promo strictly as a Dine In Only option, pairing it with machine-poured beverage value hooks to boost server tips and drive table turnaround.</p>
+        <p>Founder Insight Quote: "Our regulars look forward to Wednesdays all week long. It’s an absolute ritual. We pair the BOGO wings with our $3 domestic pints because it keeps the execution lightning fast for the bar and keeps our tables packed."</p>
+        <p>Media Asset Collection Workflow: Platter of boneless wings tossed in buffalo sauce, accompanied by celery sticks and house-made buttermilk ranch, backed by an icy domestic pint mug.</p>
+        <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Confirm presence of wing basket layout with ranch ramification in Media files; otherwise create custom asset during service hours.]</p>
+        <h2>3. Campaign 3: The Backyard Ritual (Weekend Patio & Music)</h2>
+        <p>Strategic Core: Drive weekend on-premise volume for live music locations (Cross Roads, Nacogdoches) and brand-wide patios. Focus layout entirely on shareable starters (Queso Blanco & Chips) that require zero assembly time from back-of-house staff.</p>
+        <p>Founder Insight Quote: "Bottlecap is built around the outdoor patio culture. When the weather is right and the live music kicks off on the stage, we want our tables filled with chips, white queso, and cold drinks. It's easy for the team and great for the crowd."</p>
+        <p>Media Asset Collection Workflow: Wide shots of outdoor patios during twilight hours alongside macro images of the Triple Play dip tray (Queso Blanco, scratch salsa, hand-smashed guacamole).</p>
+        <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Cross Roads & Nacogdoches stage/outdoor setting image link verification required; if unavailable, substitute with universal open-air patio asset.]</p>
+        <h2>4. Campaign 4: The Game-Day Gridiron (Sports & Spirits)</h2>
+        <p>Strategic Core: Establish Bottlecap Alley as the ultimate local sports bar destination. Maximize brand recognition in competitive territories like Grapevine and the upcoming Euless corridor by highlighting the visual power of the D2' Burger and Loaded Frito Pie combined with zero-friction add-ons.</p>
+        <p>Founder Insight Quote: "We love our sports bar roots. When the game goes live on the big screens, we want to see a packed house. Pushing items like Loaded Frito Pie or the D2' Burger alongside a quick pour of a cold pint means our guests get hot food fast, and we keep the line moving smoothly."</p>
+        <p>Media Asset Collection Workflow: Sliced double-beef D2' Burger highlighting fresh grill lines, melted American cheese, and the artisan bun structure, backed by game screens blurred in the distance.</p>
+        <p>Asset Status Checklist: [RESTAURANT VERIFICATION REQUIRED: Verify that Loaded Frito Pie or D2' Burger layout photos are validated within the system; if missing, schedule immediate alternative asset swap lines.]</p>
+    </div>
+    <div class="slide-footer"><span>Month 1 Strategic Growth Roadmap</span><span>Slide 5</span></div>
+</div>
+
+<div class="slide-container">
+    <div class="slide-header">
+        <span class="brand-tag">Bottlecap Alley</span>
+        <span class="ctx-tag">Section 6: Complete Content Deliverables</span>
+    </div>
+    <div class="slide-body">
+        <h2>1. Long-Form Managed Emails (8 Clean Decks)</h2>
+        <div class="stretch-row">
+            <div class="email-copy-panel">
+                <h4>Managed Email 1: Campaign 1 Launch (Taco Reveal)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 5, 2026 | Friday | 9:30 AM MDT / 10:30 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: Grilled shrimp meets hot honey glaze 🌮</div>
+                <div class="email-copy-body">Preview Text: Step up your dinner routine at Bottlecap Alley.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">WHAT'S NEW ON THE MENU?</div>
+                <div class="email-copy-body">Sizzle into the week with the all-new Sweet & Spicy Shrimp Tacos. We take lightly blackened grilled shrimp and top it off with our hot honey glaze, honey pepper slaw, cotija cheese, cilantro, and a drizzle of house-made jalapeno ranch inside soft corn tortillas. Served up fresh with charro beans and chips & salsa.</div>
+                <div class="email-copy-body">Our grills are hot, the AC is humming inside, and we've got a cold stool waiting at the bar with your name on it. Skip the grocery line and join us for dinner tonight.</div>
+                <div class="email-copy-body">Pair your taco plate with our legendary Queso Blanco & Chips—creamy white queso served fresh with pico de gallo. It's the perfect zero-friction start to a killer meal.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm high-res Sweet & Spicy Shrimp Taco close-up tray shot exists in Brand Hub, or capture on next food shoot.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</div>
+                <div class="email-copy-body">Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Managed Email 2: Campaign 1 Pivot (Appetizer Accelerator)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 6, 2026 | Friday | 10:30 AM MDT / 11:30 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: White queso blanco is on tap for the weekend 🧀</div>
+                <div class="email-copy-body">Preview Text: The patio is calling. Start the weekend at Bottlecap Alley.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">TRACK THE WEEKEND RUSH</div>
+                <div class="email-copy-body">The weekend has officially arrived, the stadium screens are lit, and the patio doors are open. Skip the cooking lines tonight and get straight to relaxing with the ultimate table starter loop.</div>
+                <div class="email-copy-body">Our house-favorite Queso Blanco & Chips features premium white queso blended with fresh pico de gallo, served hot alongside fresh tortilla chips. It’s an effortless neighborhood casual patio favorite that rolls from our kitchen to your table instantly—giving you zero-friction comfort the second you sit down.</div>
+                <div class="email-copy-body">Looking for a full layout? Upgrade the crew to our legendary Triple Play tray to grab our white queso, signature scratch salsa recipe, and homemade guacamole served up alongside a mountain of freshly made tortilla chips. Pair it up with an ice-cold $3 Domestic Pint or a fresh $4 Tito's straight from the bar.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Use confirmed image of white queso tray pull or composite Triple Play line from local media folder.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</div>
+                <div class="email-copy-body">Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Managed Email 3: Campaign 2 Launch (Wing Wednesday)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 9, 2026 | Tuesday | 8:00 AM MDT / 9:00 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: Tomorrow is the ultimate midweek ritual 🍗</div>
+                <div class="email-copy-body">Preview Text: BOGO Wings are calling your name at Bottlecap Alley.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">WING WEDNESDAY IS ON</div>
+                <div class="email-copy-body">Get your game plan ready for tomorrow. Join us for our weekly Wing Wednesday ritual and grab Buy One Get One FREE Wings from 3:00 PM to 8:00 PM. Traditional bone-in or our hand-breaded boneless marinated chicken fingers—the choice is completely yours.</div>
+                <div class="email-copy-body">Toss them in your favorite house wing flavor and pair them up with clean celery sticks and our house-made buttermilk ranch.</div>
+                <div class="email-copy-body">To wrap up the perfect midweek pairing, we are NOW POURING $3 Domestic Pints ALL DAY LONG. Just ice-cold beer and hot wings served straight to your table.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm presence of wing basket layout with ranch ramification in Media files.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * All Locations: Wing Promo Active 3:00 PM – 8:00 PM | Dine In Only.</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Managed Email 4: Campaign 2 Focus (Drinks & Wings)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 12, 2026 | Friday | 9:00 AM MDT / 10:00 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: Cold domestic pints are now pouring 🍻</div>
+                <div class="email-copy-body">Preview Text: Grab an icy mug at Bottlecap Alley today.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">NOW POURING ALL DAY LONG</div>
+                <div class="email-copy-body">Keep the weekend routine simple. Pull up a stool at the bar because we are pouring $3 Domestic Pints ALL DAY LONG across every single one of our locations.</div>
+                <div class="email-copy-body">When the kitchen is humming and the crowds roll in, our bar team keeps the execution lightning fast so you never have to wait for an icy refill. Pair that cold pint with a basket of our Fried Pickles—hand-battered and fried to golden brown perfection, served up fresh with our house-made Hidden Valley Ranch.</div>
+                <div class="email-copy-body">Bring the family down, claim your spot on the patio, and enjoy a true Bottlecap Alley environment.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Use standard bar draft pour visual asset or update with fresh baseline imagery.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</div>
+                <div class="email-copy-body">Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Managed Email 5: Campaign 3 Launch (Patio Culture)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 16, 2026 | Tuesday | 8:30 AM MDT / 9:30 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: Twilight, live music, and cold drinks 🎸</div>
+                <div class="email-copy-body">Preview Text: Hit the patio at Bottlecap Alley.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">THE BACKYARD PATIO RITUAL</div>
+                <div class="email-copy-body">There is nothing quite like a Texas sunset on an open outdoor patio. This weekend, we are cranking up the stadium lights and hosting live music stages at select backyard locations.</div>
+                <div class="email-copy-body">Skip the cooking stress and come share a Triple Play tray with the table. You get a massive layout of our queso blanco, signature scratch salsa recipe, and homemade guacamole served alongside a mountain of freshly made tortilla chips.</div>
+                <div class="email-copy-body">Our servers are ready, the patio seats are open, and the music sets face the crowd this weekend. Come claim your table early.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Cross Roads & Nacogdoches stage/outdoor setting image link verification required.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * All Locations: Live music active on select patio setups. Check local store lines. Dine In Only.</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Managed Email 6: Campaign 3 Focus (Appetizer Lift)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 19, 2026 | Friday | 9:30 AM MDT / 10:30 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: White queso blanco is ready to dip 🧀</div>
+                <div class="email-copy-body">Preview Text: Start your weekend right at Bottlecap Alley.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">OPERATIONALLY QUICK. LEGENDARY TASTE.</div>
+                <div class="email-copy-body">When the weekend rush hits, we make sure our most popular appetizers are ready to roll out to your table instantly. Our house-favorite Queso Blanco & Chips features premium white queso blended with fresh pico de gallo, served hot alongside fresh tortilla chips. It’s an effortless table classic that lets you start snacking the second you sit down.</div>
+                <div class="email-copy-body">Pair your dip tray up with an ice-cold drink from the bar. We are pouring $4 Tito's all evening long to keep the vibes right and the check sizes simple.</div>
+                <div class="email-copy-body">Head over to the patio, enjoy the cool breeze, and let our team handle the hospitality.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm white queso chip-pull detail visual asset is locked inside backend platform.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</div>
+                <div class="email-copy-body">Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Managed Email 7: Campaign 4 Launch (Sports / Loaded Frito Pie)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 23, 2026 | Tuesday | 7:00 AM MDT / 8:00 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: Earl's meaty chili meets white queso blanco 🏈</div>
+                <div class="email-copy-body">Preview Text: Catch the Rangers live at Bottlecap Alley.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">THE ULTIMATE SPORTS BAR FOOTPRINT</div>
+                <div class="email-copy-body">When the game goes live on our big screens, the energy at Bottlecap Alley is unmatched. Fuel your fandom this week with our brand-wide favorite Loaded Frito Pie—Fritos smothered completely in our homemade Earl's meaty chili, creamy queso blanco, fresh pico de gallo, and jalapenos.</div>
+                <div class="email-copy-body">Looking for a heavy-hitting burger lineup? Try the D2' Burger—two fresh patties smashed right on the grill, double American cheese, lettuce, tomatoes, onions, and pickles on a fresh bun. Pair it with our old-fashioned Tater Tots or crispy Beer Battered Onion Rings fried golden brown.</div>
+                <div class="email-copy-body">Our flat screens are tuned to the game, the indoor AC is running crisp, and the beer lines are cold. Bring the crew down and catch every play live.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Confirm separate Loaded Frito Pie or burger alignment photo asset is validated.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</div>
+                <div class="email-copy-body">Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Managed Email 8: Campaign 4 Focus (Final Check Lift)</h4>
+                <div class="email-copy-body">[DEPLOY METADATA: June 26, 2026 | Friday | 9:30 AM MDT / 10:30 AM Central Local]</div>
+                <div class="email-copy-body">Target Audience: All Location CRM Database</div>
+                <div class="email-copy-body">Subject Line: Smashed on the grill since day one 🍔</div>
+                <div class="email-copy-body">Preview Text: Fresh, never frozen burgers at Bottlecap Alley.</div>
+                <div class="email-copy-body">Body Copy Block:</div>
+                <div class="email-copy-body">FRESH. NEVER FROZEN. GRINDED DAILY.</div>
+                <div class="email-copy-body">At Bottlecap Alley, we built our name on doing burgers the right way. We take a proprietary blend of fresh beef that is grinded daily, ship it straight to our stores without ever touching a freezer, and smash it down on the grill the exact second you order to lock in those crispy, seasoned edges.</div>
+                <div class="email-copy-body">Try the legendary Original Original Burger today. Make it a complete basket by adding our Fresh Cut Fries made from scratch right in the restaurant—by cutting real potatoes right in the building every single day.</div>
+                <div class="email-copy-body">No corporate tricks, no frozen patties—just an authentic Texas burger paired with a cold $3 Domestic Pint or $4 Tito's poured straight from the machine.</div>
+                <div class="email-copy-body">[Button Link Type: Website] -> VISIT OUR WEBSITE</div>
+                <div class="email-copy-body">Visual Asset Tracking Note: [RESTAURANT VERIFICATION REQUIRED: Use visual champion photo of Original Original Burger with visible grill smash edges.]</div>
+                <div class="email-copy-body">Location Footer Customization Engine: * Corsicana: Open until 11:00 PM | Dine In Only.</div>
+                <div class="email-copy-body">Cross Roads, Grapevine, Greenville, Nacogdoches: Open until 11:45 PM | Dine In Only.</div>
+            </div>
+        </div>
+        <h2>2. Broadcast SMS Pushes (4 Characters-Compliant Campaigns)</h2>
+        <p>STATUS NOTE: PER RECONNAISSANCE, ALL BROADCAST SMS CAMPAIGNS ARE OFFICIALLY PAUSED FOR MONTH 1 TO PROTECT OVERHEAD INVOICING CAPACITY WHILE OWNED DATABASE GENERATION TAKES PLACE THROUGH TOAST WEBSITE MIGRATION LOGISTICS.</p>
+        <h2>3. Organic Social Posts (8 Comprehensive Copy Decks)</h2>
+        <div class="stretch-row">
+            <div class="email-copy-panel">
+                <h4>Social Post 1: Campaign 1 Hook (Taco Reveal)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 5, 2026 | Friday | 2:30 PM MDT / 3:30 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Tight, high-resolution shot of the Sweet & Spicy Shrimp Tacos on a clean steel tray liner. Ensure the lime wedge is visibly squeezed over the blackened grilled shrimp, highlighting the fresh texture of the honey pepper slaw and cotija cheese. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">WHAT'S NEW ON THE MENU? 🌮🔥</div>
+                <div class="email-copy-body">Meet the all-new Sweet & Spicy Shrimp Tacos. We take lightly blackened grilled shrimp and stack them inside soft corn tortillas with our honey pepper slaw, cotija cheese, fresh cilantro, and a kick of house-made jalapeno ranch. Served with charro beans and chips & salsa!</div>
+                <div class="email-copy-body">Operationally, our kitchen has the grills fired up to drop these hot to your table fast, meaning your crew spends less time waiting and more time hanging out on the patio. Pair it up with a side of our creamy Queso Blanco & Chips for the ultimate text-mex pairing.</div>
+                <div class="email-copy-body">Pull up a stool at your local patio tonight! 🍻</div>
+                <div class="email-copy-body">#BottlecapAlley #TexasCasual #ShrimpTacos #NacogdochesEats #CrossRoadsTX #GrapevineFoodies #GreenvilleEats #CorsicanaFood #DineInTexas #PatioRitual</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Social Post 2: Campaign 1 Pivot (Queso Blanco App Accelerator)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 6, 2026 | Friday | 3:30 PM MDT / 4:30 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Clean, appealing shot of a hot tray of Queso Blanco & Chips sitting center table on an outdoor wood patio surface. Highlight a chip breaking the surface film of the melted white cheese layout, with pico de gallo visible on top. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">WHITE QUESO BLANCO IS READY 🧀☀️</div>
+                <div class="email-copy-body">The weekend has officially rolled into Bottlecap Alley, stadium screens are glowing, and our neighborhood casual patio tables are open. BOH has our house-favorite Queso Blanco & Chips prepped and ready to hit your table the exact second you claim a seat.</div>
+                <div class="email-copy-body">This is an absolute backyard favorite—premium white cheese blended hot with fresh pico de gallo, served alongside a mountain of crispy tortilla chips. Want to upgrade the table layout? Ask the team for the massive Triple Play tray to grab our white queso, signature scratch salsa, and hand-smashed guacamole all at once. 🥑</div>
+                <div class="email-copy-body">Head over, skip the cooking line, and let us pour you a $3 Domestic Pint or $4 Tito's to start the weekend right! Dine In Only.</div>
+                <div class="email-copy-body">#QuesoBlanco #TriplePlayDips #BottlecapAlley #PatioVibes #FreshCut #NacogdochesEats #CrossRoadsEats #GrapevineEats #GreenvilleEats #CorsicanaFood</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Social Post 3: Campaign 2 Hook (Wing Wednesday)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 10, 2026 | Wednesday | 1:15 PM MDT / 2:15 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Overhead, geometric shot of traditional bone-in wings tossed in glowing buffalo sauce, flanked by clean celery sticks and an icy, condensation-covered mug of domestic beer. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">WING WEDNESDAY IS ACTIVE! 🍗🍻</div>
+                <div class="email-copy-body">The midweek backyard ritual is officially live across all five locations. Come smash a plate of our Buy One Get One FREE Wings from 3:00 PM to 8:00 PM today! Traditional bone-in or our hand-breaded boneless marinated chicken fingers tossed fresh in your favorite house sauce.</div>
+                <div class="email-copy-body">We are pairing the wing plates up by NOW POURING $3 Domestic Pints ALL DAY LONG. Ice-cold beer and hot wings served straight to your table.</div>
+                <div class="email-copy-body">Dine In Only. Pull up a chair and let our team handle the rest! 🙌</div>
+                <div class="email-copy-body">#WingWednesday #BOGOWings #HandBreaded #NowPouring #ColdPints #BottlecapAlley #GreenvilleEats #CrossRoadsEats #NacogdochesFood #DineInOnly</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Social Post 4: Campaign 2 Momentum (Drink/App Focus)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 12, 2026 | Friday | 2:30 PM MDT / 3:30 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Action shot of a bartender pouring an ice-cold mug from the tap line or machine, with a crispy golden basket of Wisconsin Fried Cheese curds sitting hot on the bar countertop. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">NOW POURING ALL DAY LONG 🍺🧀</div>
+                <div class="email-copy-body">We keep the bar execution lightning fast so you can get an icy refill the exact second your table needs it. We are pouring $3 Domestic Pints ALL DAY LONG across every single Bottlecap Alley location.</div>
+                <div class="email-copy-body">Complete the bar lineup with a basket of our Fried Pickles—hand-battered and fried to golden brown perfection, served up fresh with our scratch-made Hidden Valley Ranch. 🍟</div>
+                <div class="email-copy-body">The game is live on the big screens and the indoor AC is running cold. Come find a stool! Dine In Only.</div>
+                <div class="email-copy-body">#BottlecapAlley #TexasSportsBar #FriedCheese #ColdBeer #BarStoolVibes #GrapevineTX #CorsicanaTexas #NacogdochesRegulars #PatioVibes</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Social Post 5: Campaign 3 Hook (Patio/Live Music)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 16, 2026 | Tuesday | 1:15 PM MDT / 2:15 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Wide sunset shot of the Nacogdoches or Cross Roads outdoor patio structures, showing the live music stage lights kicking on, with a Triple Play dip plate prominent in the foreground. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">PATIO WEATHER & LIVE MUSIC 🎸✨</div>
+                <div class="email-copy-body">Twilight is hitting the neighborhood casual patio setups just right. Tonight, our live music stages are fired up to deliver the ultimate weekend atmosphere at our local music spots.</div>
+                <div class="email-copy-body">Bring the entire family down and start the table off with our legendary Triple Play tray—creamy white queso, scratch-made salsa packed with fresh tomatoes, and homemade guacamole served up hot with freshly made tortilla chips. 🥑</div>
+                <div class="email-copy-body">Great tunes, cold drinks, and zero-friction hospitality. Come claim your patio table early! Dine In Only.</div>
+                <div class="email-copy-body">#BottlecapAlley #LiveMusicTexas #PatioRitual #TriplePlayDips #BackyardVibes #NacogdochesMusic #CrossRoadsLive #TexasSunset</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Social Post 6: Campaign 3 Momentum (Regulars Target)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 19, 2026 | Friday | 2:30 PM MDT / 3:30 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Tight macro shot of a chip pulling a thick stream of white queso out of the Brisket Queso & Chips bowl, highlighting chunks of smoked brisket and fresh pico. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">OPERATIONALLY FAST. INSTANT COMFORT. 🧀🔥</div>
+                <div class="email-copy-body">When the weekend rush hits, our kitchen keeps the lines moving smoothly by prepping our heavy-hitting appetizers to roll out instantly. Our house-favorite Queso Blanco & Chips is poured straight to your table so you can start snacking immediately.</div>
+                <div class="email-copy-body">Level up with our Brisket Queso & Chips loaded with smoked brisket and fresh pico de gallo. Balance out the heat by grabbing a $4 Tito's poured fresh at the bar all evening long. 🍸</div>
+                <div class="email-copy-body">Pull up a stool and relax under the Texas sky! Dine In Only.</div>
+                <div class="email-copy-body">#QuesoBlanco #SmokedBrisket #TitosTime #BottlecapAlley #FastHospitality #GreenvillePatio #GrapevineFood #CorsicanaRegulars #BackyardDining</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Social Post 7: Campaign 4 Hook (Sports/D2 Burger)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 23, 2026 | Tuesday | 2:15 PM MDT / 3:15 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Close-up of the double-beef, double-cheese D2' Burger sitting next to a hot order of brand-wide favorite Loaded Frito Pie smothered in Earl's chili and queso. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">LOADED FRITO PIE & BIG GAME VIBES 🏈💥</div>
+                <div class="email-copy-body">Catch the game live at the ultimate local sports bar. We are loading up tables with our brand-wide classic Loaded Frito Pie—Fritos smothered in our homemade chili, queso, fresh pico, and jalapenos.</div>
+                <div class="email-copy-body">Fuel the crew with our heavy-hitting D2' Burger—two layers of fresh, never frozen beef blend and double American cheese smashed right on the grill. Maximize the experience by adding a side of old-fashioned Tater Tots or crispy Beer Battered Onion Rings. 🧅</div>
+                <div class="email-copy-body">Our flat screens are locked on the game and the draft lines are running ice cold. Bring the crew down tonight! Dine In Only.</div>
+                <div class="email-copy-body">#SportsBarTexas #FritoPie #D2Burger #FreshNeverFrozen #SmashedOnTheGrill #GameDayVibes #GrapevineSports #CrossRoadsFood #GreenvilleBurgers</div>
+            </div>
+            <div class="email-copy-panel">
+                <h4>Social Post 8: Campaign 4 Momentum (Burger Craft Narrative)</h4>
+                <div class="email-copy-body">Deployment Target: Facebook & Instagram</div>
+                <div class="email-copy-body">Deployment Timing: [June 30, 2026 | Tuesday | 1:15 PM MDT / 2:15 PM Central Local Store Time]</div>
+                <div class="email-copy-body">Visual Direction: Clean, crisp shot of the Original Original Burger showcased on a wooden board or steel tray, emphasizing the crispy smashed edges of the fresh patty protruding past the artisan bun line. [FLAG: ASSET VERIFICATION REQUIRED IN BRAND HUB]</div>
+                <div class="email-copy-body">Caption Copy Block:</div>
+                <div class="email-copy-body">FRESH. NEVER FROZEN. GRINDED DAILY. 🛠️🍔</div>
+                <div class="email-copy-body">Since day one, we've kept our burger promise simple. No frozen patties, no pre-packaged corporate shortcuts. We take a fresh beef blend grinded daily, ship it straight to our five stores, and smash it down on the grill the exact second you order to lock in those crispy, legendary edges.</div>
+                <div class="email-copy-body">Come sink your teeth into the classic Original Original Burger today. Make it a complete basket by adding our Fresh Cut Fries made from scratch right in the restaurant—by cutting real potatoes right in the building every single day. 🍟</div>
+                <div class="email-copy-body">Pair it with a $3 Domestic Pint All Day Long and enjoy real, unpretentious Texas hospitality. Dine In Only.</div>
+                <div class="email-copy-body">#OriginalOriginal #SmashedOnTheGrill #FreshCutFries #FromScratch #BottlecapAlley #BurgerLovers #CorsicanaEats #NacogdochesEats #GrapevineEats</div>
             </div>
         </div>
     </div>
-    <div class="footer-panel"><span>System Deployment Telemetry</span><span>Section 1</span></div>
+    <div class="slide-footer"><span>Month 1 Strategic Growth Roadmap</span><span>Slide 6</span></div>
+</div>
+
+<div class="slide-container">
+    <div class="slide-header">
+        <span class="brand-tag">Bottlecap Alley</span>
+        <span class="ctx-tag">Section 7: Performance Metrics & Dashboard KPIs</span>
+    </div>
+    <div class="slide-body">
+        <h2>1. POS Metrics Tracking Loops</h2>
+        <p>All multi-unit location data tracking loops must interface directly through the unified Toast POS platform backend across all 5 operational locations, completely eliminating the data disconnect between independent legacy platforms.</p>
+        <p>Primary POS Conversion KPI: Total transaction footprint conversion from anonymous foot traffic to owned digital CRM profiles (Target: 15% database expansion over 28 days via Toast Website sign-ups).</p>
+        <p>Return Rate Momentum: Direct monitoring of the 59.7% returning guest baseline to track return cadence tightening without relying on blanket discounting mechanisms.</p>
+        <h2>2. Automated Modifier Check-Size Lift Data</h2>
+        <p>Tracking of the Fresh Cut Fries attach-rate mechanics when pushed as a basket upgrade from standalone burger line transactions (Target: 8% lift in baseline modifier sales volume).</p>
+        <p>Monitoring automated checkout prompts pairing low-margin entrée options with high-margin, low-labor appetizer anchors (Queso Blanco & Chips / Triple Play tray).</p>
+        <h2>3. Saved Third-Party App Commission Totals</h2>
+        <p>Direct audit tracking of on-premise conversion lines. Because campaigns strictly utilize "butts-in-seats" language, all generated traffic preserves direct in-house cash flow, bypasses third-party aggregator delivery commission cuts, and protects server tips.</p>
+        <h2>4. Data Review Checkpoint Technical Blueprint</h2>
+        <p>AUTOMATED POS DATA EXTRACTION LAYER: The unified software platform completes its final core balance calculation precisely on July 3 at 11:59 PM. This metric compile automatically measures check increases and website consolidation lines before unlocking next-month marketing deployment gates.</p>
+        <h2>5. Next-Month Strategy Activation Gates</h2>
+        <p>Gate 1 (Website Migration Success): If Toast Website migration metrics reflect successful data consolidation across all 5 locations, unlock automated "Welcome Back" email triggers based on guest return cadence intervals.</p>
+        <p>Gate 2 (SMS Database Readiness): If organic text-club opt-in fields on the new website cross a critical subscriber threshold across individual stores, initialize the scheduled Info Call on SMS logistics to review exact per-message invoicing costs before activating Phase 2 broadcast text tools.</p>
+    </div>
+    <div class="slide-footer"><span>Month 1 Strategic Growth Roadmap</span><span>Slide 7</span></div>
 </div>
 </div>
 </body>
